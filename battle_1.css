@@ -1,0 +1,479 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #6f7b84;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+main {
+  padding: 5px;
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article {
+  flex: 1 1 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
+
+/* ############ */
+
+/* The 12 targets of Battle #1:
+https://cssbattle.dev/battle/1 */
+
+.simply-square {
+  background-color: #5d3a3a;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.simply-square > div {
+  flex: 0 0 50%;
+  background: #dd6b4d;
+  background-color: #b5e0ba;
+}
+
+.simply-square > div:after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/* Carrom */
+.carrom {
+  background: #62374e;
+}
+.carrom > div {
+  display: flex;
+  flex: 0 0 300px !important;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.carrom > div > .row {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.carrom .row > div {
+  width: 50px;
+  height: 50px;
+  background: #fdc57b;
+}
+
+/* Push Button */
+.push-button {
+  background: #6592cf;
+}
+
+.push-button > div {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 150px;
+  background: #243d83;
+}
+
+.push-button p {
+  box-sizing: content-box;
+  width: 50px;
+  height: 50px;
+  border: 50px solid #243d83;
+  border-radius: 100px;
+  outline: 50px solid #6592cf;
+  background: #eeb850;
+  margin: auto;
+}
+
+/* Ups n Downs */
+.ups-n-downs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #62306d;
+}
+.ups-n-downs > div {
+  flex: 0 0 300px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 100px;
+}
+
+.odd-row {
+  margin-left: 100px;
+  border-radius: 50px 50px 0 0;
+}
+
+.even-row {
+  border-radius: 0 0 50px 50px;
+}
+
+.even-row,
+.odd-row {
+  width: 100px;
+  height: 100px;
+  background: #f7ec7d;
+}
+
+/* Acid rain */
+.acid-rain {
+  background: #0b2429;
+}
+
+.acid-rain > div {
+  width: 360px;
+  height: 240px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.acid-rain .row-1 {
+  left: 180px;
+  border-radius: 50%;
+}
+
+.acid-rain .row-2 {
+  top: 60px;
+  background: #998235;
+}
+
+.acid-rain .row-3 {
+  top: 120px;
+  left: -180px;
+}
+
+.acid-rain > div > div {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #f3ac3c;
+  border-radius: 50% 0 50% 50%;
+}
+
+/*#6. Missing Slice */
+.missing-slice {
+  background: #e3516e;
+}
+.missing-slice > div {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.missing-slice p {
+  margin: 0;
+  height: 50%;
+  flex: 0 0 50%;
+  background: #fade8b;
+  border-radius: 0 100% 0 0;
+}
+.missing-slice p:first-of-type {
+  border-radius: 100% 0 0;
+  background: #51b5a9;
+}
+.missing-slice p:last-of-type {
+  border-radius: 0 0 0 100%;
+  background: #f7f3d7;
+}
+
+/* #7. Leafy Trail */
+.leafy-trail {
+  background: #0b2429;
+}
+.leafy-trail div {
+  width: 250px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.leafy-trail p {
+  width: 150px;
+  margin: 0;
+  border-radius: 67% 0 67% 0;
+  position: relative;
+}
+.leafy-trail p:first-of-type {
+  background: #1a4341;
+}
+.leafy-trail p:nth-of-type(2) {
+  background: #998235;
+  left: -100px;
+}
+.leafy-trail p:last-of-type {
+  background: #f3ac3c;
+  left: -200px;
+}
+
+/* #8. Forking Crazy */
+
+.forking-crazy {
+  align-items: end !important;
+  background: #6592cf;
+}
+
+.fork {
+  width: 140px;
+  height: 240px;
+  background: #6592cf;
+}
+.branches {
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #060f55;
+}
+.branches > div {
+  width: 20px;
+  height: 100%;
+}
+.branches > div:nth-of-type(even) {
+  background: #6592cf;
+  border-radius: 0 0 10px 10px;
+}
+.branches > div:nth-of-type(odd) {
+  margin-top: -10px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+  background: #060f55;
+}
+.base {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  background: #060f55;
+  border-radius: 0 0 90px 90px / 0 0 90px 90px;
+}
+
+.stem-container {
+  height: 55px;
+  text-align: center;
+}
+.stem {
+  width: 20px;
+  height: 100%;
+  background: #060f55;
+  margin: -5px auto;
+}
+
+/* #9. Tesseract */
+.tesseract {
+  background: #222730;
+}
+
+.tesseract .grid-container {
+  flex: 0 0 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.tesseract .frame {
+  width: 150px;
+  height: 150px;
+  background: #4caab3;
+  /* z-index: 2; */
+  position: relative;
+}
+
+.tesseract .frame.left {
+  left: 150px;
+}
+
+.tesseract .frame.right {
+  left: -150px;
+}
+
+.tesseract .square {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.tesseract .square.shadow {
+  background: #222730;
+  width: 150px;
+}
+
+.tesseract .square.shadow.left {
+  left: 79px;
+  z-index: 1;
+}
+
+.tesseract .square.shadow.right {
+  left: -79px;
+  z-index: 1;
+}
+
+.tesseract .square.turquoise {
+  z-index: 2;
+  background: #4caab3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tesseract .circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #393e46;
+}
+
+/* #10. Cloaked Spirits */
+.cloaked-spirits {
+  background: #62306d;
+  align-items: end;
+}
+
+.cloaked-spirits .container {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.cloaked-spirits .col {
+  flex: 0 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.cloaked-spirits .col-m > div {
+  border-radius: 100px 100px 0 0;
+  background: #f7ec7d;
+  height: 150px;
+  width: 100px;
+}
+.cloaked-spirits .col-l > div {
+  border-radius: 100px 100px 0 0;
+  background: #f7ec7d;
+  height: 250px;
+  width: 100px;
+}
+.cloaked-spirits .col > div > p {
+  margin: 0;
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  border: 20px solid;
+  box-sizing: border-box;
+}
+.cloaked-spirits .col-m > div > p {
+  background: #e38f66;
+  border-color: #aa445f;
+}
+.cloaked-spirits .col-l > div > p {
+  background: #aa445f;
+  border-color: #e38f66;
+}
+
+/* #11. Eye of Sauron */
+.eye-of-sauron {
+  background: #191210;
+}
+.eye-of-sauron div {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.eye-of-sauron .full {
+  width: 140px;
+  height: 140px;
+  border: 20px solid #eca03d;
+  border-radius: 100%;
+}
+.eye-of-sauron .half {
+  width: 100px;
+  height: 50px;
+  margin-bottom: 50px;
+  border: 20px solid #eca03d;
+  border-bottom: transparent;
+  border-radius: 50px 50px 0 0;
+  left: -20px;
+}
+.eye-of-sauron .inv {
+  transform: rotate(180deg);
+  margin-bottom: -50px;
+  left: 20px;
+}
+.eye-of-sauron .eye {
+  width: 50px;
+  height: 50px;
+  background: #84271c;
+  border-radius: 100%;
+}
+
+/* #12. Wiggly Moustache */
+.wiggly-moustache {
+  background: #f5d6b4;
+}
+.wiggly-moustache .container {
+  display: grid;
+  width: 22em;
+  height: 6em;
+  grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+}
+
+.wiggly-moustache .container div {
+  width: 6em;
+  height: 3em;
+  position: relative;
+  border: 2em solid #d86f45;
+}
+
+.wiggly-moustache .container .bottom {
+  top: 3em;
+  border: 2em solid #d86f45;
+  border-top: none;
+  border-radius: 0 0 5.5em 5.5em;
+}
+
+.wiggly-moustache .container div.left {
+  left: 2em;
+}
+
+.wiggly-moustache .container div.right {
+  left: -2em;
+}
+
+.wiggly-moustache .container .upper {
+  border-bottom: none;
+  border-radius: 5.5em 5.5em 0 0;
+}
+
+.wiggly-moustache .container p.point {
+  position: relative;
+  margin: 0;
+  width: 2em;
+  height: 2em;
+  background: #d86f45;
+  border-radius: 100%;
+  top: 2em;
+}
+
+.wiggly-moustache .container p.left {
+  left: 4em;
+}
+
+.wiggly-moustache .container p.right {
+  left: -4em;
+}
