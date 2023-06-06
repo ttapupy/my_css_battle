@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #6f7b84;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+main {
+  padding: 5px;
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article {
+  flex: 0 0 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
+
+/* #13. Totally Triangle */
+.totally-triangle {
+  background: #0b2429;
+  display: block;
+}
+.totally-triangle > div {
+  width: 141px;
+  height: 141px;
+  background: #f3ac3c;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+}
+
+/* #14. Web Maker Logo */
+.web-maker-logo {
+  background: #f2f2b6;
+}
+.web-maker-logo .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 280px;
+  height: 130px;
+  box-sizing: border-box;
+}
+.web-maker-logo > .container > div {
+  position: relative;
+  width: 150px;
+  height: 130px;
+  background: #fd4602;
+}
+.web-maker-logo > .container > .light {
+  background: #ff6d00;
+}
+.web-maker-logo .tri-down {
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  z-index: 2;
+}
+.web-maker-logo .tri-down:not(.light) {
+  left: -130px;
+  z-index: 1;
+}
+.web-maker-logo .tri-up {
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+  right: 190px;
+  z-index: 2;
+}
+.web-maker-logo .tri-up.light {
+  right: 320px;
+  z-index: 1;
+}
+
+/* #15. Overlap */
+.overlap {
+  background: #09042a;
+}
+.overlap .circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 2;
+  position: relative;
+}
+.overlap .plum {
+  left: 25px;
+  background: #7b3f61;
+  overflow: hidden;
+}
+.overlap .peach {
+  background: #e78481;
+  z-index: 1;
+  left: -25px;
+}
+.overlap .plum:after {
+  background: #09042a;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: inline-block;
+  content: "";
+  position: relative;
+  left: 100px;
+}
+
+/* #16. Eye of the Tiger */
+.tiger-eye {
+  background: #0b2429;
+}
+.tiger-eye .green {
+  display: flex;
+  margin: auto;
+  flex: 0 0 200px;
+  height: 200px;
+  background: #998235;
+  transform: rotate(45deg);
+  border-radius: 50% 0;
+}
+.tiger-eye .yellow {
+  margin: auto;
+  width: 140px;
+  height: 140px;
+  background: #0b2429;
+  border-radius: 50%;
+  border: 20px solid #0b2429;
+  outline: 45px solid #f3ac3c;
+  outline-offset: -65px;
+}
+
+/* #17. Fidget Spinner */
+.fidget-spinner {
+  background: #09042a;
+}
+.fidget-spinner .container {
+  flex: 0 0 200px;
+  height: 220px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fidget-spinner .chain {
+  width: 200px;
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50%;
+  background: #e78481;
+  z-index: 1;
+}
+.fidget-spinner .link {
+  flex: 0 0 80px;
+  background: #09042a;
+  box-sizing: border-box;
+  height: 80px;
+  border: 10px solid #e78481;
+  border-radius: 50%;
+  z-index: 3;
+}
+.fidget-spinner .circle {
+  position: relative;
+  background: #f5bb9c;
+  width: 80px;
+  height: 80px;
+  border: 10px solid #09042a;
+  box-sizing: border-box;
+  border-radius: 50%;
+  z-index: 2;
+  margin: auto;
+}
+
+.fidget-spinner .circle.top {
+  top: 15px;
+}
+.fidget-spinner .circle.bottom {
+  top: -15px;
+}
+
+/* #18. Matrix */
+.matrix {
+  background: #5c434c;
+}
+.matrix .container {
+  width: 400;
+  height: 300;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+  padding: 10px;
+}
+.matrix .row {
+  display: contents;
+}
+.matrix p {
+  margin: 0;
+  width: 80px;
+  height: 80px;
+  background: #f5d6b4;
+  border-radius: 100% 0 0;
+}
+.matrix .row:nth-of-type(odd) > p:nth-of-type(odd) {
+  background: #f09462;
+}
+.matrix .row:nth-of-type(even) > p:nth-of-type(even) {
+  background: #f09462;
+}
