@@ -210,3 +210,109 @@ article {
 .matrix .row:nth-of-type(even) > p:nth-of-type(even) {
   background: #f09462;
 }
+
+/* #19. Cube */
+.cube {
+  background: #0b2429;
+}
+.cube > div {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}
+.cube p {
+  margin: 0;
+  position: absolute;
+}
+.cube .top-left {
+  width: 71px;
+  height: 72px;
+  transform: translateY(-21px) translateX(-21px) skew(0, -45deg);
+  background: #998235;
+}
+.cube .top-right {
+  width: 71px;
+  height: 72px;
+  transform: translateY(-20px) translateX(50px) skew(0, 45deg);
+  background: #1a4341;
+}
+.cube .bottom {
+  transform: translateY(35px) rotateZ(-45deg);
+  width: 100px;
+  height: 100px;
+  background: #f3ac3c;
+}
+
+/* #20. Ticket  */
+.ticket {
+  background: #62306d;
+}
+.ticket .container {
+  position: relative;
+  width: 202px;
+  height: 102px;
+}
+.ticket .container div {
+  position: absolute;
+  display: inline-block;
+  height: 100px;
+}
+.ticket .container > .yellow {
+  background: #f7ec7d;
+  width: 140px;
+  left: 1px;
+  top: 1px;
+}
+.ticket .container > .orange {
+  background: #e38f66;
+  width: 60px;
+  right: 1px;
+  top: 1px;
+}
+.ticket p {
+  position: absolute;
+  margin: 0;
+  height: 21px;
+  width: 21px;
+  box-sizing: border-box;
+  background: #62306d;
+  z-index: 10;
+}
+.ticket p.small {
+  height: 11px;
+  width: 11px;
+}
+.ticket .tly {
+  border-radius: 0 0 100% 0;
+}
+.ticket .tlo {
+  border-radius: 0 0 100% 0;
+  right: 51px;
+}
+.ticket .try {
+  right: 60px;
+  border-radius: 0 0 0 100%;
+}
+.ticket .tro {
+  right: 0;
+  border-radius: 0 0 0 100%;
+}
+.ticket .bly {
+  bottom: 0;
+  border-radius: 0 100% 0 0;
+}
+.ticket .blo {
+  bottom: 0;
+  border-radius: 0 100% 0 0;
+  right: 51px;
+}
+.ticket .bry {
+  right: 60px;
+  bottom: 0;
+  border-radius: 100% 0 0;
+}
+.ticket .bro {
+  right: 0;
+  bottom: 0;
+  border-radius: 100% 0 0;
+}
