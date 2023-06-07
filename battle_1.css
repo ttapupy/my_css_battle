@@ -276,7 +276,6 @@ https://cssbattle.dev/battle/1 */
 }
 
 .tesseract .grid-container {
-  flex: 0 0 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
@@ -310,12 +309,12 @@ https://cssbattle.dev/battle/1 */
 }
 
 .tesseract .square.shadow.left {
-  left: 79px;
+  left: 70px;
   z-index: 1;
 }
 
 .tesseract .square.shadow.right {
-  left: -79px;
+  left: -70px;
   z-index: 1;
 }
 

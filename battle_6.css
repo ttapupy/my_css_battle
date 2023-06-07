@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #6f7b84;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+main {
+  padding: 5px;
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article {
+  flex: 0 0 400px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 450px;
+}
+
+/* #31. Equals */
+.equals {
+  background: #aa445f;
+}
+.equals div {
+  width: 250px;
+  height: 200px;
+  text-align: center;
+}
+.equals p {
+  float: left;
+  margin: 0;
+  width: 100px;
+  height: 200px;
+  background: #f7ec7d;
+  border-radius: 200px 0 0 200px;
+}
+.equals p:last-of-type {
+  background: #e38f66;
+  border-radius: 0 200px 200px 0;
+  float: right;
+}
+
+/* #32. Band-aid */
+.band-aid {
+  background: #ffffff;
+}
+.band-aid div.container {
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  text-align: center;
+  font-size: 25px;
+}
+.band-aid .container > div {
+  height: 2em;
+}
+.band-aid p {
+  margin: auto;
+}
+.band-aid p.green {
+  width: 2em;
+  height: 3em;
+  background: #a3a368;
+}
+.band-aid p.yellow {
+  display: inline-block;
+  background: #f3ac3c;
+  width: 3em;
+  height: 2em;
+}
+.band-aid p.center {
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  background: #fbe18c;
+}
+
+/* #33. Birdie */
+.birdie {
+  background: #1a4341;
+  font-size: 25px;
+}
+.birdie .half {
+  width: 3em;
+  height: 6em;
+  background: #998235;
+  margin-left: 1em;
+  border-radius: 6em 0 0 6em;
+}
+.birdie .quarter {
+  width: 4em;
+  height: 4em;
+  background: #f3ac3c;
+  border-radius: 0 100% 0 0;
+  margin-top: -100px;
+}
+.birdie p {
+  width: calc(1em * 1.2);
+  height: calc(1em * 1.2);
+  border-radius: 100%;
+  background: #0b2429;
+  margin: calc(1em * 1.2) 0 0 calc(1em * 1.2);
+}
+
+/* #34. Christmas Tree */
+.christmas-tree {
+  background: #007065;
+}
+.christmas-tree div {
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+}
+.christmas-tree p {
+  position: relative;
+  margin: 0 auto;
+  width: 10em;
+  height: 4em;
+  background: #dd6b4d;
+  top: 2em;
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+}
+.christmas-tree .top {
+  top: 2em;
+  background: #ffeecf;
+  z-index: 10;
+}
+.christmas-tree .middle {
+  top: 0;
+  background: #f5c181;
+  z-index: 5;
+}
+.christmas-tree .bottom {
+  top: -2em;
+  background: #00a79d;
+}
+
+/* #35. Ice Cream */
+.ice-cream {
+  background: #293462;
+}
+.ice-cream div {
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+}
+.ice-cream p {
+  margin: auto;
+}
+.ice-cream .ic {
+  width: 4em;
+  height: 6em;
+  background: #fff1c1;
+  border-radius: 2em 2em 0.8em 0.8em;
+}
+.ice-cream .stick {
+  background: #fe5f55;
+  width: 1.2em;
+  height: 2em;
+  border-radius: 0 0 25% 25%;
+  box-sizing: border-box;
+  border-top: 0.4em solid #a64942;
+}
+
+/* #36. Interleaved */
+.interleaved {
+  background: #1a4341;
+}
+.interleaved div {
+  font-size: 25px;
+  width: 400px;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.interleaved p {
+  width: 2em;
+  height: 8em;
+  position: relative;
+}
+.interleaved p.b {
+  background: #f3ac3c;
+  top: 4em;
+  border-radius: 1em 1em 0 0;
+}
+.interleaved p.t {
+  background: #998235;
+  top: 0;
+  border-radius: 0 0 1em 1em;
+}
