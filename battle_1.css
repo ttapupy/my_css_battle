@@ -275,55 +275,48 @@ https://cssbattle.dev/battle/1 */
   background: #222730;
 }
 
-.tesseract .grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
-
-.tesseract .frame {
-  width: 150px;
+.tesseract .container {
+  flex: 0 0 100%;
   height: 150px;
+  text-align: center;
   background: #4caab3;
-  /* z-index: 2; */
   position: relative;
 }
 
-.tesseract .frame.left {
-  left: 150px;
-}
-
-.tesseract .frame.right {
-  left: -150px;
+.tesseract .container > div {
+  position: absolute;
+  display: inline-block;
+  font-size: 0;
 }
 
 .tesseract .square {
+  transform: rotate(45deg);
   width: 150px;
   height: 150px;
-  position: relative;
-  transform: rotate(45deg);
 }
 
 .tesseract .square.shadow {
   background: #222730;
-  width: 150px;
 }
 
 .tesseract .square.shadow.left {
-  left: 70px;
+  left: calc(50% - 146px);
   z-index: 1;
 }
 
 .tesseract .square.shadow.right {
-  left: -70px;
+  left: calc(50% - 4px);
   z-index: 1;
 }
 
 .tesseract .square.turquoise {
+  left: calc(50% - 75px);
   z-index: 2;
   background: #4caab3;
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: 15px solid #222730;
 }
 
 .tesseract .circle {
