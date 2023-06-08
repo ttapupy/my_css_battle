@@ -10,7 +10,6 @@ In order the code work inside CSS Batle's editor, one may has to replace the con
 
     <style>
       body {
-        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
